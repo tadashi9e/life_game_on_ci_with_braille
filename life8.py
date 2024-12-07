@@ -23,7 +23,7 @@ class Life(object):
         u'''次ステップでのセル状態を決定する。
         '''
         self._cells = {
-            self._clipping(point)
+            point
             for point, n in collections.Counter(
                     [self._clipping((y + dy, x + dx))
                      for (y, x) in self._cells
